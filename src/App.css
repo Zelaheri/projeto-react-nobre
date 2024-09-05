@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+body {
+  background-color: #1f1f1f !important;
+  color: white !important;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  padding-top: 56px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fixed-top {
+  z-index: 1046 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar>.container-fluid {
+  flex-direction: row;
+  justify-content: end !important;
+  align-items: center !important;
+}
+
+.navbar-brand {
+  position: fixed;
+  right: 50%;
+  transform: translateX(50%);
+  margin: auto 0 !important
+}
+
+.offcanvas {
+  top: 56px !important;
+  height: fit-content !important;
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+.offcanvas-body {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden !important;
+}
+
+.navbar-nav {
+  text-align: center !important;
+  transition: all 300ms;
+}
+
+.navbar-nav>*:hover {
+  transform: scale(115%);
+  transition: all 300ms;
+}
+
+/* Home */
+.carousel-item>img{
+  filter: saturate(110%);
+}
+
+/* Contact */
+.form-control,
+.form-select {
+  background-color: #212529 !important;
+}
+
+.form-control::placeholder,
+.form-select {
+  color: white !important;
+}
+
+/* About */
+.card{
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  overflow: hidden;
+  max-height: calc(100vh - 56px);
+}
+
+.card-img,
+.card-img-overlay {
+  width: calc(100vw - 2px) !important;
+}
+
+.card-img {
+  filter: brightness(50%);
+}
+
+.card-img-overlay{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-img-overlay>.card-text{
+  height: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
